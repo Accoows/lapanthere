@@ -445,6 +445,35 @@ nav .caret {
     margin-bottom: 40px;
 }
 
+.responsive-title {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+blockquote {
+    border: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+blockquote p {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+blockquote cite {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: 300;
+    font-style: normal;
+    display: block;
+    color: #333333c5;
+}
+
 .btn {
     margin: 0 5px 5px 0;
 }
