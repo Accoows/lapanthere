@@ -1,69 +1,170 @@
+/* --- 1. Base & Typographie --- */
 body {
-    font-family: "Helvetica", Arial, sans-serif;
-    color: #575757;
+    margin: 0;
+    padding: 0;
+    background: #FFF;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "helvetica", Arial, sans-serif;
 }
 
+a, 
+button {
+    transition: all .3s ease-in-out;
+    outline: none !important;
+}
 
-a, button { transition: all .3s ease-in-out; }
-a:hover { text-decoration: none; }
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
 
+h1, h2, h3, h4, h5, h6, p, label {
+    font-family: "helvetica";
+    font-weight: 400;
+    color: #575757 !important;
+}
 
-
-/* bloc layout */
+/* --- 2. Système de Blocs (Layout & Gaps) --- */
 .bloc {
     width: 100%;
+    clear: both;
     position: relative;
     background-size: cover;
     background-position: center;
     padding: 0 50px;
 }
 
-.bloc-lg { padding: 100px 50px; }
-.bloc-md { padding: 50px; }
-.bloc-sm { padding: 20px 50px; }
-
-@media (max-width: 767px) {
-    .bloc { padding: 40px 10px; }
-    .bloc-lg, .bloc-md { padding: 40px 0; }
+.bloc-lg {
+    padding: 100px 50px;
 }
 
-/* texture x effets */
-.bloc-bg-texture::before {
-    content: "";
-    position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
+.bloc-md {
+    padding: 50px;
 }
 
-.texture-paper::before {
-    background: url("../img/texture-paper.png");
-    background-size: 280px 280px;
+/* Gap Header & Footer */
+.bloc-sm {
+    padding: 20px 50px;
 }
 
-
-/* icones */
-.icon-md { 
-    font-size: 30px !important; 
+.container {
+    max-width: 1000px;
 }
 
-.icon-lg { 
-    font-size: 60px !important; 
+/* --- 3. Espacements & Utilitaires --- */
+.voffset {
+    margin-top: 30px;
 }
 
-.icons {
-    margin-top: 24px;
-    margin-bottom: 14px;
-}   
+.voffset-lg {
+    margin-top: 80px;
+}
 
-.b-parallax { background-attachment: fixed; }
+.mg-md {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
-/* personnalisation couleur */
-.bgc-white { background-color: #FFFFFF; }
-.bgc-atomic-tangerine { background-color: #F3976C; }
-.bgc-dark-slate-blue { background-color: #364577; }
+.mg-lg {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
 
-.tc-white, .white { color: #FFFFFF !important; }
-.tc-atomic-tangerine { color: #F3976C !important; }
+.tight-width-whitespace {
+    max-width: 600px;
+    margin: auto;
+}
+
+.med-width-whitespace {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* txt */
+
+.clr {
+    color:#F3976C !important;
+}
+
+.clr2 {
+    color: #000 !important;
+}
+
+/* quotes */
+
+.responsive-title {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+blockquote {
+    border: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+blockquote p {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+blockquote cite {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: 300;
+    font-style: normal;
+    display: block;
+    color: #333333c5;
+}
+
+/* --- 4. Couleurs --- */
+.bgc-white {
+    background-color: #FFFFFF;
+}
+
+.bgc-dark-slate-blue {
+    background-color: #364577;
+}
+
+.bgc-atomic-tangerine {
+    background-color: #F3976C;
+}
+
+.tc-white, 
+.white {
+    color: #FFFFFF !important;
+}
+
+.tc-atomic-tangerine {
+    color: #F3976C !important;
+}
+
+/* --- 5. Boutons & Composants --- */
+.btn-rd {
+    border-radius: 40px;
+}
+
+.btn-clean {
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-bottom-color: rgba(0, 0, 0, .1);
+    text-shadow: 0 1px 0 rgba(0, 0, 1, .1);
+    box-shadow: 0 1px 3px rgba(0, 0, 1, .25), inset 0 1px 0 0 rgba(255, 255, 255, .15);
+}
+
+.cta-hero {
+    margin-top: 22px;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF !important;
+}
 
 .btn-atomic-tangerine {
     background: #F3976C;
@@ -74,44 +175,116 @@ a:hover { text-decoration: none; }
     background: #c27956 !important;
 }
 
-/* ajustement */
-.navbar-brand img { height: 40px; }
+.icons {
+    margin-top: 24px;
+    margin-bottom: 30px; /* Augmente cette valeur pour plus d'espace sous l'icône */
+    display: inline-block;
+}
 
-.hero-bloc-text { font-size: 38px; font-weight: 700; }
+.icon-lg {
+    font-size: 60px !important;
+    display: inline-block;
+}
 
-.tight-width-whitespace {
-    max-width: 600px;
+.icon-md {
+    font-size: 30px !important;
+}
+
+.sm-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+/* --- 6. Navigation --- */
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+@media (min-width: 768px) {
+    .site-navigation {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+}
+
+/* --- 7. Footer & Social --- */
+.social {
+    max-width: 400px;
     margin: auto;
 }
 
-.social .icon-md { font-size: 30px; color: #FFF !important; }
-
-/* utilitaires */
-.voffset-lg { margin-top: 80px; }
-.mg-md { margin-bottom: 20px; }
-.bold-link { font-weight: 900; text-decoration: underline !important; }
-
-
-/* imgs de fond */
-
-.bg-dots-bg { 
-    background-image: url("../img/dots-bg.webp"); 
+footer ul {
+    list-style: none;
+    padding: 0;
 }
 
-.bg-lines-h2-bg { 
-    background-image: url("../img/lines-h2-bg.png"); 
+footer li a {
+    color: #FFFFFF !important;
+    font-size: 11px;
 }
 
-.bg-banniere { 
-    background-image: url("../img/agence-la-panthere.webp"); 
+.social .icon-md {
+    color: #FFFFFF !important;
 }
 
-.bg-presentation { 
-    background-image: url("../img/image-de-presentation.webp"); 
+/* --- 8. Backgrounds & Design répétitif (Lignes) --- */
+.bg-lines-h2-bg {
+    background-image: url("../img/lines-h2-bg.png");
 }
 
-/* aspect grain texture papier */
+.bg-repeat {
+    background-repeat: repeat;
+    background-size: auto !important;
+}
+
+.bg-banniere {
+    background-image: url("../img/agence-la-panthere.webp");
+}
+
+.bg-presentation {
+    background-image: url("../img/image-de-presentation.webp");
+}
+
+.bg-dots-bg {
+    background-image: url("../img/dots-bg.webp");
+}
+
+.b-parallax {
+    background-attachment: fixed;
+}
+
+.bloc-bg-texture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .texture-paper::before {
     background: url("../img/texture-paper.png");
     background-size: 280px 280px;
+}
+
+.black-background {
+    background-color: rgba(165, 147, 99, 0.7);
+    padding: 40px;
+}
+
+/* --- 9. Responsive --- */
+@media (max-width: 767px) {
+    .bloc {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .bloc-lg, 
+    .bloc-md {
+        padding: 40px 0;
+    }
+    .voffset-lg {
+        margin-top: 30px;
+    }
 }
