@@ -96,6 +96,12 @@ h1, h2, h3, h4, h5, h6, p, label {
     text-decoration: underline;
 }
 
+.nav a {
+    padding: 12px 15px !important;
+    min-height: 44px;
+    display: inline-block;
+}
+
 /* quotes */
 
 .responsive-title {
@@ -226,11 +232,22 @@ footer ul {
 
 footer li a {
     color: #FFFFFF !important;
-    font-size: 11px;
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px 5px;
+    min-height: 44px;
+    line-height: 24px;
 }
 
 .social .icon-md {
     color: #FFFFFF !important;
+}
+
+.social a {
+    display: inline-block;
+    padding: 12px;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 /* --- 8. Backgrounds & Design répétitif (Lignes) --- */
