@@ -342,18 +342,7 @@ footer li a {
     color: #FFFFFF !important;
 }
 
-<<<<<<< HEAD
-.social a {
-    display: inline-block;
-    padding: 12px;
-    min-width: 44px;
-    min-height: 44px;
-}
-
-/* --- 8. Backgrounds & Design répétitif (Lignes) --- */
-=======
 /* bg */
->>>>>>> david
 .bg-lines-h2-bg {
     background-image: url("../img/lines-h2-bg.png");
 }
