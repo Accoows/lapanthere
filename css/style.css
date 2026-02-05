@@ -1,4 +1,4 @@
-/* --- 1. Base & Typographie --- */
+/* --- Base & Typographie --- */
 body {
     margin: 0;
     padding: 0;
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6, p, label {
     color: #575757 !important;
 }
 
-/* --- 2. Système de Blocs (Layout & Gaps) --- */
+/* --- Système de Blocs (Layout & Gaps) --- */
 .bloc {
     width: 100%;
     clear: both;
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6, p, label {
     max-width: 1000px;
 }
 
-/* --- 3. Espacements & Utilitaires --- */
+/* --- Espacements & Utilitaires --- */
 .voffset {
     margin-top: 30px;
 }
@@ -135,7 +135,7 @@ blockquote cite {
     color: #333333c5;
 }
 
-/* --- 4. Couleurs --- */
+/* --- Couleurs --- */
 .bgc-white {
     background-color: #FFFFFF;
 }
@@ -157,7 +157,7 @@ blockquote cite {
     color: #F3976C !important;
 }
 
-/* --- 5. Boutons & Composants --- */
+/* --- Boutons & Composants --- */
 .btn-rd {
     border-radius: 40px;
 }
@@ -206,7 +206,7 @@ blockquote cite {
     text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
 }
 
-/* --- 6. Navigation --- */
+/* --- Navigation --- */
 .navbar-brand img {
     height: 40px;
     width: auto;
@@ -221,7 +221,7 @@ blockquote cite {
     }
 }
 
-/* --- 7. Footer & Social --- */
+/* --- Footer & Social --- */
 .social {
     max-width: 400px;
     margin: auto;
@@ -256,7 +256,7 @@ footer li a {
     margin-top: 1rem;
 }
 
-/* --- 8. Backgrounds & Design répétitif (Lignes) --- */
+/* --- Backgrounds & Design répétitif (Lignes) --- */
 .bg-lines-h2-bg {
     background-image: url("../img/lines-h2-bg.png");
 }
@@ -305,7 +305,12 @@ textarea {
     resize: vertical;
 }
 
-/* --- 9. Responsive --- */
+/* Formulaire */
+#form-alert {
+    margin-top: 1rem;
+}
+
+/* --- Responsive --- */
 @media (max-width: 767px) {
     .bloc {
         padding-left: 0;
