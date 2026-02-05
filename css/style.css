@@ -86,6 +86,8 @@ h1, h2, h3, h4, h5, h6, p, label {
 
 .clr {
     color:#F3976C !important;
+    position: relative;
+    z-index: 10;
 }
 
 .clr2 {
@@ -297,6 +299,10 @@ footer li a {
 .black-background {
     background-color: rgba(165, 147, 99, 0.7);
     padding: 40px;
+}
+
+textarea {
+    resize: vertical;
 }
 
 /* --- 9. Responsive --- */
