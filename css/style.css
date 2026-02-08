@@ -158,9 +158,9 @@ h1, h2, h3, h4, h5, h6, p, label {
     
     /* Bouton CTA Contact */
     #bloc-0 .site-navigation > li:last-child > a {
-        background: #F3976C;
+        background: #c06e48;
         color: #fff !important;
-        border-color: #F3976C;
+        border-color: #c06e48;
     }
     
     #bloc-0 .site-navigation > li:last-child > a:hover {
@@ -325,7 +325,7 @@ h1, h2, h3, h4, h5, h6, p, label {
 /* txt */
 
 .clr {
-    color:#F3976C !important;
+    color:#fda278 !important;
     position: relative;
     z-index: 10;
 }
@@ -400,7 +400,7 @@ blockquote cite {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #f08f62;
+    background-color: #c06e48;
 }
 
 .tc-white, 
@@ -409,7 +409,7 @@ blockquote cite {
 }
 
 .tc-atomic-tangerine {
-    color: #F3976C !important;
+    color: #c06e48 !important;
 }
 
 /* btns */
@@ -421,7 +421,7 @@ blockquote cite {
     font-weight: 700;
     text-transform: uppercase;
     color: #FFFFFF !important;
-    background: #F3976C;
+    background: #c06e48;
     border-radius: 40px;
     border: 1px solid rgba(0, 0, 0, .08);
     border-bottom-color: rgba(0, 0, 0, .1);
@@ -525,7 +525,7 @@ blockquote cite {
 .carousel-indicators .active {
     width: 30px; 
     height: 10px;
-    background-color: #F3976C;
+    background-color: #c06e48;
     margin: 0 5px;
 }
 
@@ -601,7 +601,8 @@ blockquote cite {
     letter-spacing: 2px;
     font-weight: bold;
     margin-bottom: 30px;
-    opacity: 0.7;
+    opacity: 0.8;
+    color: white !important;
 }
 
 .social-bento-grid {
@@ -626,7 +627,7 @@ blockquote cite {
 
 .social-bento-grid a:hover {
     background: white;
-    color: #F3976C !important;
+    color: #c06e48 !important;
     transform: translateY(-5px) rotate(8deg);
 }
 
@@ -851,7 +852,7 @@ textarea {
 
 .prev-lightbox:hover, 
 .next-lightbox:hover {
-    color: #F3976C !important;
+    color: #c06e48 !important;
     transform: translateY(-50%) scale(1.2);
 }
 
