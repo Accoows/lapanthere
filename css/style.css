@@ -704,7 +704,7 @@ footer li a {
 }
 
 .b-parallax {
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 .bloc-bg-texture::before {
@@ -717,8 +717,14 @@ footer li a {
 }
 
 .texture-paper::before {
-    background: url("../img/texture-paper.png");
+    background: url("../img/texture-paper.png"); /* On remet l'image d'origine */
     background-size: 280px 280px;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .black-background {
