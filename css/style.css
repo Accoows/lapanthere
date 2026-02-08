@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #FFF;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Empêche le décalage latéral (Body Side-Shift) */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: "helvetica", Arial, sans-serif;
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6, p, label {
 
 .container {
     max-width: 1000px;
-    margin: 0 auto !important;
+    margin: 0 auto !important; /* CORRECTION DU BODY : Centre le site pour éviter le décalage */
 }
 
 /* burger */
@@ -450,10 +450,83 @@ blockquote cite {
     width: auto;
 }
 
-/* footer */
+/* ==========================================================================
+   CARROUSEL PORTFOLIO (STYLE 2024 - FIX IMAGES)
+   ========================================================================== */
+
+.modern-carousel {
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+    padding-bottom: 60px;
+}
+
+.portfolio-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); /* Ombre douce 2024 */
+    transition: transform 0.4s ease;
+    margin: 10px;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 400px; /* Force une taille moyenne uniforme */
+    object-fit: cover; /* Assure que l'image remplit le bloc sans déformation */
+    transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Indicateurs (Dots Pills version 2024) */
+.carousel-indicators {
+    bottom: 0;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+
+.carousel-indicators .active {
+    width: 30px; 
+    height: 10px;
+    background-color: #F3976C;
+    margin: 0 5px;
+}
+
+/* ==========================================================================
+   FOOTER (MODERN BENTO STYLE 2024)
+   ========================================================================== */
 
 .modern-footer {
-    padding: 60px 0;
+    padding: 60px 0; /* Espacement réduit */
     color: white;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     width: 100%;
@@ -626,6 +699,7 @@ textarea {
     .text-right-tablet { text-align: right; }
     .container { width: 92% !important; max-width: 1600px; }
     
+    /* On baisse la taille du mail pour qu'il loge sur tablette */
     .footer-email-link {
         font-size: 18px !important;
     }
@@ -643,6 +717,8 @@ textarea {
     .voffset-lg {
         margin-top: 30px;
     }
+    
+    /* Correction du décalage Body (Body Side-Shift) */
     .row {
         margin-left: 0;
         margin-right: 0;
@@ -660,4 +736,95 @@ textarea {
     .footer-tagline, .footer-address { font-size: 24px; }
     .social-bento-grid { grid-template-columns: repeat(2, 100px); gap: 30px; }
     .social-bento-grid a { width: 100px; height: 100px; font-size: 40px; border-radius: 25px; }
+}
+
+/* ==========================================================================
+   FIX FENÊTRE LIGHTBOX (COMPOSANTS)
+   ========================================================================== */
+
+/* Fond de la modale */
+#lightbox-modal {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+}
+
+/* Conteneur de l'image */
+.blocs-lb-container {
+    position: relative !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.modal-body {
+    padding: 0 !important;
+    position: relative;
+}
+
+#lightbox-image {
+    border-radius: 8px; /* Coins arrondis style 2024 */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    max-height: 85vh; /* Évite que l'image ne dépasse de l'écran */
+    margin: 0 auto;
+}
+
+/* Bouton Fermer (Close) */
+.close-lightbox {
+    position: absolute !important;
+    top: -50px !important; /* Sort du cadre vers le haut */
+    right: 0 !important;   /* Aligné au bord droit de l'image */
+    color: #fff !important;
+    font-size: 45px !important;
+    opacity: 0.8;
+    background: transparent;
+    border: none;
+    padding: 0 !important;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.close-lightbox:hover {
+    opacity: 1;
+}
+
+/* Flèches de Navigation */
+.prev-lightbox, 
+.next-lightbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff !important;
+    font-size: 35px;
+    padding: 20px;
+    z-index: 1000;
+    transition: all 0.3s;
+    text-decoration: none !important;
+}
+
+.prev-lightbox { left: -60px; }
+.next-lightbox { right: -60px; }
+
+.prev-lightbox:hover, 
+.next-lightbox:hover {
+    color: #F3976C !important; /* Votre couleur orange */
+    transform: translateY(-50%) scale(1.2);
+}
+
+/* Légende (Caption) */
+.lightbox-caption {
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE LIGHTBOX --- */
+@media (max-width: 992px) {
+    .prev-lightbox { left: 10px; background: rgba(0,0,0,0.3); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; }
+    .next-lightbox { right: 10px; background: rgba(0,0,0,0.3); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; }
+    .prev-lightbox span, .next-lightbox span { font-size: 20px; }
 }
