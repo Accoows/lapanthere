@@ -12,6 +12,9 @@ $(function()
 				var processorFile = getProcessorPath($form);
 				var formData = {};
 
+				// Remove any existing alert messages
+				$('#form-alert').remove();
+
 				$form.find("input, textarea, option:selected").each(function(e) // Loop over form objects build data object
 				{		
 					var fieldData =  $(this).val();
@@ -40,9 +43,9 @@ $(function()
 		    		cache: false,
 		    		success: function() // Success
 		 			{  
-						if($form.is('[success-msg]')) // Show Success Message
+						if($form.is('[data-success-msg]')) // Show Success Message
 						{
-							$form.append("<div id='form-alert'><div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('success-msg')+"</strong></div></div>");
+							$form.append("<div id='form-alert' style='margin-top: 20px;'><div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('data-success-msg')+"</strong></div></div>");
 						}
 						else // Re-Direct
 						{
@@ -53,10 +56,7 @@ $(function()
 		 	   		},
 			   		error: function() // Fail
 			   		{
-						if($('#form-alert').length == 0)
-						{
-							$form.append("<div id='form-alert'><div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('fail-msg')+"</strong></div></div>");
-						}	
+							$form.append("<div id='form-alert' style='margin-top: 20px;'><div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('data-fail-msg')+"</strong></div></div>");
 			   		},
 		   		});
 			}
