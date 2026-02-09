@@ -95,7 +95,7 @@ lapanthere/
 
 1. Cloner le depot :
    ```bash
-   git clone https://github.com/Loise/IUT-panthere.git
+   git clone https://github.com/Accoows/lapanthere.git
    ```
 2. Ouvrir `index.html` dans un navigateur pour acceder au site.
 3. Pour le traitement du formulaire de contact, un serveur PHP est necessaire (ex. : XAMPP, WAMP ou tout serveur compatible PHP).
